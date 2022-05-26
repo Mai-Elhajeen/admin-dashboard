@@ -56,6 +56,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 14px;
 }
 
 body {
@@ -73,7 +74,7 @@ body {
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
+    grid-template-columns: 14rem auto 21rem;
 }
 a {
     color: var(--color-dark);
@@ -141,11 +142,10 @@ b {
 
 /* aside top (logo) */
 aside{
-    height: 100vh;
+    height: 100%;
 }
 
 aside .top {
-    background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -166,12 +166,11 @@ aside .close {
 
 /* sidebar */
 aside .sidebar {
-    background: white;
     position: relative;
     top: 3rem;
     display: flex;
     flex-direction: column;
-    height: 86vh;
+    height: 86%;
 }
 
 aside h3 {
@@ -225,17 +224,20 @@ aside .sidebar a:hover span {
 
 aside .sidebar .message-count{
     background: var(--color-danger);
-    color: var(--color-white);
+    color: #fff;
     padding: 2px 10px;
     font-size: 11px;
     border-radius: var(--border-radius-1);
+}
+aside .sidebar a:hover .message-count {
+    margin-left: 0rem;
 }
 
 /* **************** start main **************** */
 main{
     margin-top: 1.4rem;
 }
-main .data {
+main .date {
     display: inline-block;
     background: var(--color-light);
     border-radius: var(--border-radius-1);
@@ -243,14 +245,14 @@ main .data {
     padding: .5rem 1.6rem;
 }
 
-main .data input[type='data'] {
+main .date input[type="date"] {
     background: transparent;
     color: var(--color-dark);
 }
 
 main .insights {
     display: grid;
-    grid-template-columns: repeat(3. 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
 }
 
@@ -260,6 +262,7 @@ main .insights > div {
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
+    transition: all .3s ease;
 }
 
 main .insights > div:hover {
@@ -384,9 +387,8 @@ main .recent-orders a{
 
 .right .top {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     gap: 2rem;
-    background: gray;
 }
 
 .right .top button {
@@ -436,7 +438,6 @@ main .recent-orders a{
 .right .recent-updates .updates {
     background: var(--color-white);
     padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     transition: all .3s ease;
 }
@@ -444,12 +445,19 @@ main .recent-orders a{
 .right .recent-updates .updates:hover {
     box-shadow: none;
 }
+.radius-top {
+    border-top-left-radius: 1.8rem;
+    border-top-right-radius: 1.8rem;
+}
+.radius-bottom {
+    border-bottom-left-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
 
+}
 .right .recent-updates .updates .update {
     display: grid;
     grid-template-columns: 2.6rem auto;
     gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 /* **************** Sales Analytics **************** */
