@@ -29,7 +29,7 @@ orders.forEach(order => {
     <td>${order.productName}</td>
     <td>${order.productNumber}</td>
     <td>${order.paymentStatus}</td>
-    <td class="${order.shipping === 'Declined' ? 'danger' : order.shipping === 'pending' ? 'warning' : 'primary'}">${order.shipping}</td>
+    <td class="${order.shipping === 'Declined' ? 'danger' : order.shipping === 'Pending' ? 'warning' : 'primary'}">${order.shipping}</td>
     <td class="primary">Details</td>
     `
     tr.innerHTML = trContent;
